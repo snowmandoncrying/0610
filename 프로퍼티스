@@ -1,0 +1,14 @@
+#Database - H2
+spring.h2.console.enabled=true			// H2베이스 활성화 옵션
+spring.h2.console.path=/h2-console			// H2 콘솔으로 연결시키겠다 - 로컬호스트 뒤에 이 주소 넣으면 활성화 됨
+spring.datasource.url=jdbc:h2:tcp://localhost/~/test	// DB URL	
+spring.datasource.driver-class-name=org.h2.Driver	// H2 드라이버
+spring.datasource.username=sa
+spring.datasource.password=	// 비밀번호 설정 안 해도 생략하면 안 됨. 비어있는 걸 알려줘야 함
+
+#JPA
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.H2Dialect	// 스프링부트에서 제공해주는 CRUD --> JPA
+	// 자바 코드로 처리해야함. 내부적으로 SQL을 처리해주는 기능이 있을 것임. 이걸 대신해주는게 하이버네이트 
+spring.jpa.hibernate.ddl-auto=update	// 업데이트 - 기존 내용을 계속 추가해가면서 쓰겠다. 
+spring.jpa.properties.hibernate.format_sql=true	//  초기화하면서 실행. SQL이 어떻게 적용되었는지 보여준다
+spring.jpa.properties.hibernate.show_sql=true		// 콘솔창에 실제 적용되고 있는 SQL이 다 찍힘.  위 두개는 필수이고 아래 두개는 선택이다.
