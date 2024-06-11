@@ -1,0 +1,6 @@
+# 게시판 질문과 답변 여러 개
+
+build.gradle  dependencies에 testlmplementation 'org.junit.jupiter:junit-jupiter' 추가
+  Junit은 서버와 상관없이 독립적으로 실행한다. @Test 가 붙어있는 모든 것들이 잘 작동하는지 확인한다.
+  또한 테스트 안에서만 사용하는 것이다.
+  ~JpaApplicationTests.java는 말 그대로 테스트 하는 공간이며 서버에 영향을 끼치지 않는다.
